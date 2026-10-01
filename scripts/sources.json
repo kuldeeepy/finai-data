@@ -1,0 +1,287 @@
+{
+ "note": "url placeholders: {Y} {y} {m} {d} {dth} {Month} {month} {Mon} {mon} = portfolio month; {nY} {nm} {nmon} = the following (publishing) month. source: url (default) | hdfc | icici | axis | uti. Kotak skipped: Radware bot wall.",
+ "funds": [
+  {
+   "id": "parag-parikh-flexi-cap",
+   "name": "Parag Parikh Flexi Cap",
+   "amc": "PPFAS",
+   "aliases": "ppfas parag long term value",
+   "category": "Flexi Cap",
+   "url": "https://amc.ppfas.com/downloads/portfolio-disclosure/{Y}/PPFCF_PPFAS_Monthly_Portfolio_Report_{Month}_{d}_{Y}.xlsx",
+   "sheet": "PPFCF"
+  },
+  {
+   "id": "sbi-large-cap",
+   "name": "SBI Large Cap",
+   "amc": "SBI",
+   "aliases": "bluechip largecap",
+   "category": "Large Cap",
+   "url": "https://www.sbimf.com/docs/default-source/scheme-portfolios/all-schemes-monthly-portfolio---as-on-{dth}-{month}-{Y}.xlsx",
+   "sheet": "SBLUECHIP"
+  },
+  {
+   "id": "sbi-small-cap",
+   "name": "SBI Small Cap",
+   "amc": "SBI",
+   "aliases": "smallcap",
+   "category": "Small Cap",
+   "url": "https://www.sbimf.com/docs/default-source/scheme-portfolios/all-schemes-monthly-portfolio---as-on-{dth}-{month}-{Y}.xlsx",
+   "sheet": "SSCF"
+  },
+  {
+   "id": "sbi-contra",
+   "name": "SBI Contra",
+   "amc": "SBI",
+   "aliases": "",
+   "category": "Contra",
+   "url": "https://www.sbimf.com/docs/default-source/scheme-portfolios/all-schemes-monthly-portfolio---as-on-{dth}-{month}-{Y}.xlsx",
+   "sheet": "SCF"
+  },
+  {
+   "id": "nippon-india-small-cap",
+   "name": "Nippon India Small Cap",
+   "amc": "Nippon India",
+   "aliases": "reliance smallcap",
+   "category": "Small Cap",
+   "url": "https://mf.nipponindiaim.com/InvestorServices/FactsheetsDocuments/NIMF-MONTHLY-PORTFOLIO-{d}-{Mon}-{y}.xls",
+   "sheet": "SC"
+  },
+  {
+   "id": "nippon-india-large-cap",
+   "name": "Nippon India Large Cap",
+   "amc": "Nippon India",
+   "aliases": "reliance top 100 largecap",
+   "category": "Large Cap",
+   "url": "https://mf.nipponindiaim.com/InvestorServices/FactsheetsDocuments/NIMF-MONTHLY-PORTFOLIO-{d}-{Mon}-{y}.xls",
+   "sheet": "EA"
+  },
+  {
+   "id": "mirae-asset-large-cap",
+   "name": "Mirae Asset Large Cap",
+   "amc": "Mirae Asset",
+   "aliases": "mirae emerging bluechip largecap",
+   "category": "Large Cap",
+   "url": "https://www.miraeassetmf.co.in/docs/default-source/portfolios/miiof_{mon}{Y}.xlsx",
+   "sheet": "MIIOF"
+  },
+  {
+   "id": "quant-small-cap",
+   "name": "Quant Small Cap",
+   "amc": "Quant",
+   "aliases": "smallcap",
+   "category": "Small Cap",
+   "url": "https://quantmutual.com/Admin/disclouser/Monthly_Portfolio_{d}{m}{Y}.xlsx",
+   "sheet": "qSCF"
+  },
+  {
+   "id": "motilal-oswal-midcap",
+   "name": "Motilal Oswal Midcap",
+   "amc": "Motilal Oswal",
+   "aliases": "mosl mo focused midcap 30",
+   "category": "Mid Cap",
+   "url": "https://www.motilaloswalmf.com/content/dam/motilal-mf/downloads/mf/month-end-portfolio/{nY}/{nmon}/Copy%20of%20Scheme%20Portfolio%20Details%20{Mon}%20{Y}.xlsx",
+   "sheet": "YO07"
+  },
+  {
+   "id": "canara-robeco-large-cap",
+   "name": "Canara Robeco Large Cap",
+   "amc": "Canara Robeco",
+   "aliases": "bluechip largecap",
+   "category": "Large Cap",
+   "url": "https://www.canararobeco.com/wp-content/uploads/{nY}/{nm}/LC-%E2%80%93-Canara-Robeco-Large-Cap-Fund-%E2%80%93-{Month}-{Y}.xlsx",
+   "sheet": "LC"
+  },
+  {
+   "id": "hdfc-flexi-cap",
+   "name": "HDFC Flexi Cap",
+   "amc": "HDFC",
+   "aliases": "hdfc equity flexicap",
+   "category": "Flexi Cap",
+   "source": "hdfc",
+   "sheet": "HDFC Flexi Cap Fund",
+   "file": "HDFC Flexi Cap Fund"
+  },
+  {
+   "id": "hdfc-mid-cap",
+   "name": "HDFC Mid Cap",
+   "amc": "HDFC",
+   "aliases": "hdfc mid-cap opportunities midcap",
+   "category": "Mid Cap",
+   "source": "hdfc",
+   "sheet": "HDFC Mid Cap Fund",
+   "file": "HDFC Mid Cap Fund"
+  },
+  {
+   "id": "hdfc-small-cap",
+   "name": "HDFC Small Cap",
+   "amc": "HDFC",
+   "aliases": "smallcap",
+   "category": "Small Cap",
+   "source": "hdfc",
+   "sheet": "HDFC Small Cap Fund",
+   "file": "HDFC Small Cap Fund"
+  },
+  {
+   "id": "hdfc-large-cap",
+   "name": "HDFC Large Cap",
+   "amc": "HDFC",
+   "aliases": "hdfc top 100 largecap",
+   "category": "Large Cap",
+   "source": "hdfc",
+   "sheet": "HDFC Large Cap Fund",
+   "file": "HDFC Large Cap Fund"
+  },
+  {
+   "id": "hdfc-balanced-advantage",
+   "name": "HDFC Balanced Advantage",
+   "amc": "HDFC",
+   "aliases": "hdfc prudence baf dynamic asset allocation",
+   "category": "Balanced Advantage",
+   "source": "hdfc",
+   "sheet": "HDFC Balanced Advantage Fund",
+   "file": "HDFC Balanced Advantage Fund"
+  },
+  {
+   "id": "hdfc-nifty-50-index",
+   "name": "HDFC Nifty 50 Index",
+   "amc": "HDFC",
+   "aliases": "hdfc index nifty50",
+   "category": "Index",
+   "source": "hdfc",
+   "sheet": "HDFC Nifty 50 Index Fund",
+   "file": "HDFC Nifty 50 Index Fund"
+  },
+  {
+   "id": "hdfc-elss-tax-saver",
+   "name": "HDFC ELSS Tax Saver",
+   "amc": "HDFC",
+   "aliases": "hdfc taxsaver tax saver elss",
+   "category": "ELSS",
+   "source": "hdfc",
+   "sheet": "HDFC ELSS",
+   "file": "HDFC ELSS - Tax Saver Fund"
+  },
+  {
+   "id": "icici-prudential-large-cap",
+   "name": "ICICI Prudential Large Cap (erstwhile Bluechip)",
+   "amc": "ICICI Prudential",
+   "aliases": "icici bluechip icici pru largecap",
+   "category": "Large Cap",
+   "source": "icici",
+   "sheet": "Large Cap Fund",
+   "member": "^ICICI Prudential Large Cap Fund\\.xlsx$"
+  },
+  {
+   "id": "icici-prudential-value",
+   "name": "ICICI Prudential Value (erstwhile Value Discovery)",
+   "amc": "ICICI Prudential",
+   "aliases": "icici value discovery icici pru",
+   "category": "Value",
+   "source": "icici",
+   "sheet": "Value Fund",
+   "member": "^ICICI Prudential Value Fund\\.xlsx$"
+  },
+  {
+   "id": "icici-prudential-flexi-cap",
+   "name": "ICICI Prudential Flexi Cap",
+   "amc": "ICICI Prudential",
+   "aliases": "icici pru flexicap",
+   "category": "Flexi Cap",
+   "source": "icici",
+   "sheet": "Flexi Cap Fund",
+   "member": "^ICICI Prudential Flexi Cap Fund\\.xlsx$"
+  },
+  {
+   "id": "icici-prudential-nifty-50-index",
+   "name": "ICICI Prudential Nifty 50 Index",
+   "amc": "ICICI Prudential",
+   "aliases": "icici pru index nifty50",
+   "category": "Index",
+   "source": "icici",
+   "sheet": "Nifty 50 Index Fund",
+   "member": "^ICICI Prudential Nifty 50 Index Fund\\.xlsx$"
+  },
+  {
+   "id": "icici-prudential-small-cap",
+   "name": "ICICI Prudential Small Cap",
+   "amc": "ICICI Prudential",
+   "aliases": "icici pru smallcap",
+   "category": "Small Cap",
+   "source": "icici",
+   "sheet": "Small Cap Fund",
+   "member": "^ICICI Prudential Small Cap Fund\\.xlsx$"
+  },
+  {
+   "id": "axis-large-cap",
+   "name": "Axis Large Cap",
+   "amc": "Axis",
+   "aliases": "axis bluechip largecap",
+   "category": "Large Cap",
+   "source": "axis",
+   "sheet": "AXISEQF"
+  },
+  {
+   "id": "axis-small-cap",
+   "name": "Axis Small Cap",
+   "amc": "Axis",
+   "aliases": "smallcap",
+   "category": "Small Cap",
+   "source": "axis",
+   "sheet": "AXISSCF"
+  },
+  {
+   "id": "axis-midcap",
+   "name": "Axis Midcap",
+   "amc": "Axis",
+   "aliases": "axis mid cap",
+   "category": "Mid Cap",
+   "source": "axis",
+   "sheet": "AXISMCF"
+  },
+  {
+   "id": "axis-elss-tax-saver",
+   "name": "Axis ELSS Tax Saver",
+   "amc": "Axis",
+   "aliases": "axis long term equity taxsaver elss",
+   "category": "ELSS",
+   "source": "axis",
+   "sheet": "AXISTSF"
+  },
+  {
+   "id": "axis-flexi-cap",
+   "name": "Axis Flexi Cap",
+   "amc": "Axis",
+   "aliases": "flexicap",
+   "category": "Flexi Cap",
+   "source": "axis",
+   "sheet": "AXISMLF"
+  },
+  {
+   "id": "uti-nifty-50-index",
+   "name": "UTI Nifty 50 Index",
+   "amc": "UTI",
+   "aliases": "uti nifty index nifty50",
+   "category": "Index",
+   "source": "uti",
+   "sheet": "SCHEME: UTI Nifty 50 Index Fund"
+  },
+  {
+   "id": "uti-flexi-cap",
+   "name": "UTI Flexi Cap",
+   "amc": "UTI",
+   "aliases": "uti equity flexicap",
+   "category": "Flexi Cap",
+   "source": "uti",
+   "sheet": "SCHEME: UTI - Flexi Cap Fund"
+  },
+  {
+   "id": "uti-mid-cap",
+   "name": "UTI Mid Cap",
+   "amc": "UTI",
+   "aliases": "uti mid cap midcap",
+   "category": "Mid Cap",
+   "source": "uti",
+   "sheet": "SCHEME: UTI - Mid Cap Fund"
+  }
+ ]
+}
