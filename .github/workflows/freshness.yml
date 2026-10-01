@@ -1,0 +1,11 @@
+# Weekly check that every dataset is recent. A failed run makes GitHub email the repo owner.
+name: Freshness
+on:
+  schedule: [{ cron: '0 4 * * 1' }] # Monday 09:30 IST
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_fresh.py

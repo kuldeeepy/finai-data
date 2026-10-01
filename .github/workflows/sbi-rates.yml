@@ -1,0 +1,19 @@
+# Daily mirror of SBI's USD/INR TT buying rates (from github.com/sahilgupta/sbi-fx-ratekeeper), checked before it lands.
+name: SBI rates
+on:
+  schedule: [{ cron: '30 14 * * 1-6' }] # 20:00 IST, Mon–Sat
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: curl -fsSL -o /tmp/new.csv https://raw.githubusercontent.com/sahilgupta/sbi-fx-ratekeeper/main/csv_files/SBI_REFERENCE_RATES_USD.csv
+      - name: Check before replacing
+        run: python3 scripts/check_rates.py /tmp/new.csv data/sbi-usd-ttbr.csv && cp /tmp/new.csv data/sbi-usd-ttbr.csv
+      - name: Commit if changed
+        run: |
+          git config user.name "finai-data bot"; git config user.email "actions@users.noreply.github.com"
+          git add data/sbi-usd-ttbr.csv
+          git diff --cached --quiet || (git commit -m "SBI rates $(date -u +%F)" && git push)

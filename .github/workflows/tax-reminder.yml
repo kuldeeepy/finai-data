@@ -1,0 +1,13 @@
+# Opens an issue after the Union Budget and at the start of each financial year to re-check the RSU tax rules.
+name: Tax rules reminder
+on:
+  schedule: [{ cron: '0 5 2 2 *' }, { cron: '0 5 1 4 *' }] # 2 Feb and 1 Apr
+  workflow_dispatch:
+permissions: { issues: write }
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          gh issue create -R "$GITHUB_REPOSITORY" --title "Re-check RSU tax rules ($(date -u +%b\ %Y))" --body "Budget day or new financial year. Check slabs, surcharge, LTCG/STCG rates, holding periods and the ₹1.25L exemption against incometaxindia.gov.in, then update TAX and RULES_VERIFIED in finai's src/data/rsu.ts."
+        env: { GH_TOKEN: '${{ github.token }}' }
