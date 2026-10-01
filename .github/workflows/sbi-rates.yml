@@ -14,6 +14,6 @@ jobs:
         run: python3 scripts/check_rates.py /tmp/new.csv data/sbi-usd-ttbr.csv && cp /tmp/new.csv data/sbi-usd-ttbr.csv
       - name: Commit if changed
         run: |
-          git config user.name "finai-data bot"; git config user.email "actions@users.noreply.github.com"
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/sbi-usd-ttbr.csv
           git diff --cached --quiet || (git commit -m "SBI rates $(date -u +%F)" && git push)

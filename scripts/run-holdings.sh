@@ -11,4 +11,4 @@ import datetime as dt, json, sys
 json.dump({'lastRun': dt.datetime.now(dt.timezone.utc).isoformat(timespec='seconds'), 'exit': int(sys.argv[1])}, open('data/holdings-status.json', 'w'))
 PY
 git add data/funds.json data/holdings-status.json
-git -c user.name="finai-data vps" -c user.email="vps@users.noreply.github.com" commit -q -m "Fund holdings run $(date +%F) (exit $code)" && git push -q
+git -c user.name="kuldeeepy (vps)" -c user.email="120717568+kuldeeepy@users.noreply.github.com" commit -q -m "Fund holdings run $(date +%F) (exit $code)" && git push -q
