@@ -8,6 +8,6 @@ Public data behind [finai](https://financeai-tech.vercel.app)'s free tools. Ever
 | `data/holdings-status.json` | Outcome of the last holdings run | — | same |
 | `data/sbi-usd-ttbr.csv` | SBI USD/INR TT buying rates since 2020 | [sbi-fx-ratekeeper](https://github.com/sahilgupta/sbi-fx-ratekeeper) | GitHub Action, daily |
 
-Checks: `scripts/check_rates.py` rejects bad rate files; `scripts/amc.py` refuses to write fewer funds than before; the weekly **Freshness** workflow fails (and GitHub emails the owner) when data goes stale or the monthly job fails. A **Tax rules reminder** issue opens on 2 Feb and 1 Apr.
+Checks: `scripts/check_rates.py` rejects bad rate files; `scripts/amc.py` refuses to write when fewer than half the funds parse fresh (failed funds keep last month's data and are flagged); the weekly **Freshness** workflow fails (and GitHub emails the owner) when data goes stale or the monthly job fails. A **Tax rules reminder** issue opens on 2 Feb and 1 Apr.
 
 Run the holdings job by hand: `python3 -m venv .venv && .venv/bin/pip install pandas openpyxl xlrd && scripts/run-holdings.sh [--month 2026-09]`.

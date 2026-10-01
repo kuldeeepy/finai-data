@@ -189,7 +189,9 @@ for f in funds:
     for h in f['holdings']: h['name'] = pretty(h['isin'], best[h['isin']])
 
 if '--dry' in sys.argv: sys.exit(2 if problems else 0)  # parse and report only
-if not funds or len(funds) < len(prev): sys.exit(f'only {len(funds)} funds (had {len(prev)}), not overwriting funds.json')
+# Failed funds keep last month's data, so judge by how many parsed fresh; removing a fund from sources.json is fine.
+fresh = len(SOURCES['funds']) - problems
+if fresh < len(SOURCES['funds']) / 2: sys.exit(f'only {fresh} of {len(SOURCES["funds"])} funds parsed, not overwriting funds.json')
 out = {'asOf': max(f['asOf'] for f in funds), 'source': 'AMC monthly portfolio disclosures', 'funds': funds}
 OUT.write_text(json.dumps(out, ensure_ascii=False))
 print(f'wrote {len(funds)} funds, {problems} problem(s)')
